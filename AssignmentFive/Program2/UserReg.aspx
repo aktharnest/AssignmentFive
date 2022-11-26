@@ -17,6 +17,7 @@
                         </td>
                         <td class="auto-style1">
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter Name" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                         </tr>
                     <tr>
@@ -25,6 +26,8 @@
                         </td>
                         <td class="auto-style1">
                             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter E-Mail" ControlToValidate="TextBox2" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email" ControlToValidate="TextBox2" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </td>
                         
                         
@@ -35,6 +38,7 @@
                     </td>
                     <td class="auto-style1">
                         <asp:TextBox ID="TextBox3" runat="server" TextMode="Number" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Phone" ControlToValidate="TextBox3" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                         
                 </tr>
@@ -58,7 +62,12 @@
                         </td>
                         
                 </tr>
-                
+                <tr>
+            <td class="auto-style8">Age</td>
+            <td>  <asp:TextBox ID="age" runat="server"></asp:TextBox>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="age" ErrorMessage="Age should be in between 18 to 30" ForeColor="#CC0000" MaximumValue="30" MinimumValue="18"></asp:RangeValidator>
+            </td>
+        </tr>
                 
                 <tr>
                     <td>

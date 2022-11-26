@@ -12,6 +12,7 @@
                     </td>
                     <td class="auto-style1">
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter Username" ControlToValidate="TextBox1" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                         </td>
                         
                 </tr>
@@ -21,6 +22,7 @@
                     </td>
                     <td class="auto-style1">
                         <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password" ControlToValidate="TextBox2" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                         
                 </tr>
